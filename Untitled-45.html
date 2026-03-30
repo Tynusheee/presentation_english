@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leftover AI - Presentation</title>
+    <style>
+        :root {
+            --primary-green: #32CD32;
+            --soft-white: #F8F9FA;
+            --text-dark: #333333;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+            background-color: var(--soft-white);
+            color: var(--text-dark);
+            overflow: hidden; /* Zabrání scrollování */
+        }
+
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2em 10%;
+            box-sizing: border-box;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: var(--primary-green);
+            font-size: 4.5em;
+            margin-bottom: 0.2em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #555;
+            font-size: 2.5em;
+            margin-bottom: 1em;
+            font-weight: normal;
+        }
+
+        ul {
+            font-size: 1.8em;
+            text-align: left;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.8em;
+            position: relative;
+            padding-left: 1.5em;
+        }
+
+        li::before {
+            content: "🥑";
+            position: absolute;
+            left: 0;
+            font-size: 0.9em;
+        }
+
+        .highlight {
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+
+        /* Navigace */
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            z-index: 100;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background: white;
+            color: var(--primary-green);
+            border: 2px solid var(--primary-green);
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+            transition: 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        button:hover {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        .slide-counter {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            font-size: 1.2em;
+            color: #aaa;
+        }
+
+        .phone-mockup {
+            border: 8px solid #333;
+            border-radius: 30px;
+            width: 250px;
+            height: 500px;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            color: var(--primary-green);
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="slide active">
+        <h1>LEFTOVER AI</h1>
+        <h2>Be the hero your kitchen deserves.</h2>
+        <p style="font-size: 1.5em; color: #888;">Presented by Kristína Vážanová</p>
+    </div>
+
+    <div class="slide">
+        <h1>The Problem</h1>
+        <h2>The fridge is full, but there's "nothing to eat"</h2>
+        <ul>
+            <li>Wasting time staring at random ingredients</li>
+            <li>Ordering instead of cooking</li>
+            <li>Good food thrown away</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>The Solution</h1>
+        <h2>Introducing LEFTOVER AI</h2>
+        <ul>
+            <li><span class="highlight">What is it?</span> Industry-leading AI creating recipes based on the leftovers</li>
+            <li><span class="highlight">Target Audience:</span> Everyone! (Students, busy parents)</li>
+            <li><span class="highlight">Platforms:</span> Mobile App (iOS & Android), Desktop & Tablets</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>How It Works</h1>
+        <h2>3 Simple Steps to Your Meal</h2>
+        <ul>
+            <li><span class="highlight">1. Pantry Scan:</span> Tap icons or use AI Camera to snap your fridge shelf</li>
+            <li><span class="highlight">2. Filter:</span> Select Dinner, Snack, Meal for Kids, etc</li>
+            <li><span class="highlight">3. Generate:</span> Get 3-5 recipes using 100% of your listed ingredients</li>
+            
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Live App Demo</h1>
+        <h2>Let's see it in action!</h2>
+        <div class="phone-mockup">
+            [ Switch to GitHub App Here ]
+        </div>
+        <p style="font-size: 1.2em; margin-top: 1em; color: #666;">(Open the app prototype to show the Card-Swipe UI & high-res photos)</p>
+    </div>
+
+    <div class="slide">
+        <h1>Business Model</h1>
+        <h2>How do we make money?</h2>
+        <ul>
+            <li><span class="highlight">Free Version:</span> Core features are free, supported by small banner ads</li>
+            <li><span class="highlight">LEFTOVER PRO ($2.99/mo):</span> 
+                <br>💪 Nutritional Tracking (Apple Health/MyFitnessPal)
+                <br>📵 Offline Mode (Access saved recipes without Wi-Fi)
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>The Impact</h1>
+        <h2>Why do you need Leftover AI?</h2>
+        <ul>
+            <li><span class="highlight">Save Money:</span> The average user saves $40 a week on groceries</li>
+            <li><span class="highlight">Help the Planet:</span> Reduce personal food waste by 30%</li>
+            <li><span class="highlight">Eat Better:</span> Quick, homemade meals instead of fast food</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Stop Staring, Start Eating.</h1>
+        <h2>Download LEFTOVER AI today.</h2>
+        <p style="font-size: 1.8em; color: #555;">Available on iOS App Store & Google Play.</p>
+        <h1 style="font-size: 3em; margin-top: 1em;">Thank You!</h1>
+    </div>
+
+    <div class="controls">
+        <button onclick="prevSlide()">⬅ Previous</button>
+        <button onclick="nextSlide()">Next ➡</button>
+    </div>
+    <div class="slide-counter" id="counter">1 / 8</div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const counter = document.getElementById('counter');
+
+        function updateSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                }
+            });
+            counter.innerText = `${currentSlide + 1} / ${slides.length}`;
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlides();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlides();
+            }
+        }
+
+        // Podpora pro šipky na klávesnici (Doleva a Doprava) a mezerník
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowRight' || event.key === ' ') {
+                nextSlide();
+            } else if (event.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+    </script>
+</body>
+</html>
